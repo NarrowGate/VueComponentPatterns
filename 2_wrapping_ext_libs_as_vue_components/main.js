@@ -1,17 +1,4 @@
-new Vue({
-    el: '#vueId',
-
-    data: {
-        email:'',
-        recieveNewsletter: false,
-    },
-
-    methods: {
-        submit : function() {
-            console.log('Save settings', {
-                email: this.email,
-                newsletter: this.recieveNewsletter
-            })
-        }
-    }
+var picker = new Pikaday({
+    field: document.getElementById('datepicker'),
+    format: 'YYYY-MM-DD'
 })
