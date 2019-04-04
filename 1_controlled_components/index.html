@@ -26,7 +26,8 @@
                         <span class="form-label mb-2">Newsletter</span>
                         <div class="flex justify-between items-center">
                             <p class="mr-4">Send you occasional news and updates.</p>
-                            <toggle-input :val="recieveNewsletter" @input = "(newValue) => this.recieveNewsletter = newValue"></toggle-input>
+                            <!-- <toggle-input :val="recieveNewsletter" @input = "(newValue) => this.recieveNewsletter = newValue"></toggle-input> -->
+                            <toggle-input v-model="recieveNewsletter"></toggle-input>
                         </div>
                     </div>
                     <div class="text-right">
