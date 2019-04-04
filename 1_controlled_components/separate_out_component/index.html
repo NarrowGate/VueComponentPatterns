@@ -26,13 +26,7 @@
                         <span class="form-label mb-2">Newsletter</span>
                         <div class="flex justify-between items-center">
                         <p class="mr-4">Send you occasional news and updates.</p>
-
-                        <span class="toggle flex-no-shrink" role="checkbox" tabindex="0"
-                            :aria-checked="recieveNewsletter.toString()"
-                            :data-someAttribute = "recieveNewsletter.toString()"
-                            @click = "toggleNewsletter"
-                            @keydown.space.prevent = "toggleNewsletter">
-                        </span>
+                            <toggle-input></toggle-input>
                         </div>
                     </div>
                     <div class="text-right">
@@ -47,6 +41,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="components/ToggleInput.js"></script>
     <script src="js/main.js"></script>
 
 </body>
