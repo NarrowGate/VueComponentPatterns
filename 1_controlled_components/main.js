@@ -12,9 +12,6 @@ new Vue({
                 email: this.email,
                 newsletter: this.recieveNewsletter
             })
-        },
-        toggleNewsletter : function() {
-            this.recieveNewsletter = !this.recieveNewsletter
         }
     }
 })

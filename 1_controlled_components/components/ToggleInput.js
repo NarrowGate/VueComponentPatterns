@@ -1,17 +1,21 @@
 Vue.component('toggle-input', {
     template: `<span class="toggle flex-no-shrink" role="checkbox" tabindex="0"
-                    :aria-checked="value.toString()"
-                    :data-someAttribute = "value.toString()"
+                    :aria-checked="toggled.toString()"
+                    :data-someAttribute = "toggled.toString()"
                     @click= toggle
                     @keydown.space.prevent = "toggle"
                     >    
                 </span>`,
+    model: {
+        prop: 'toggled',
+        event: 'toggle'
+    },                
 
-    props: ['value'],
+    props: ['toggled'],
 
     methods: {
         toggle : function() {
-            this.$emit('input', !this.value);
+            this.$emit('toggle', !this.toggled);
         }
     }
 
