@@ -1,17 +1,13 @@
 Vue.component('pickaday', {
-    template: `<input :value="date" class="form-input" type="text" id="datepicker">`,
+    template: `<input :value="value" class="form-input" type="text" id="datepicker">`,
 
-    data: function() {
-        return {
-            date:'2019-05-04'
-        }
-    },
+    props: ['value'],
 
     mounted: function() {
         var picker = new Pikaday({
             field: document.getElementById('datepicker'),
             onSelect: () => {
-                this.date = picker.toString()
+                this.$emit('input', picker.toString())
             }
         })
     }
