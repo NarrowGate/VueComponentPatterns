@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" id="vueId">
+                <div class="min-h-screen flex items-center justify-center">
+                    <div class="max-w-sm mx-auto">
+                      <button type="button" class="btn btn-blue"
+                        @click="modalOpen = true"
+                      >Open Modal</button>
+                    </div>
+                    <announcement-modal
+                      :show="modalOpen"
+                      @close="modalOpen = false"
+                    ></announcement-modal>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="components/AnnouncementModal.js"></script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
